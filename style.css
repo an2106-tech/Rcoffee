@@ -293,7 +293,10 @@ a {
   display: inline-block;
   margin-bottom: 1.5rem;
   width: 100%;
-  border-radius: 4px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -324,12 +327,23 @@ a {
   color: var(--color-gold);
 }
 
+/* --- Menu Tabs (Mobile Only) --- */
+.menu-tabs-container {
+  display: none;
+}
+
 /* --- Menu Cards --- */
 .mobile-menu-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.menu-category-group {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-  margin-top: 3rem;
 }
 
 .menu-category {
@@ -667,7 +681,53 @@ a {
   }
   
   .mobile-menu-cards {
+    display: block;
+    margin-top: 1rem;
+  }
+  
+  .menu-category-group {
+    display: none;
     grid-template-columns: 1fr;
+  }
+  .menu-category-group.active {
+    display: grid;
+    animation: fadeInTab 0.4s ease-out forwards;
+  }
+  @keyframes fadeInTab {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .menu-tabs-container {
+    display: block;
+    margin-top: 2rem;
+  }
+  .menu-tabs {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 10px;
+    scrollbar-width: none;
+  }
+  .menu-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .menu-tab {
+    padding: 8px 20px;
+    background: transparent;
+    border: 1px solid var(--color-gold);
+    color: var(--color-text-light);
+    border-radius: 20px;
+    white-space: nowrap;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    transition: var(--transition-smooth);
+    text-transform: uppercase;
+  }
+  .menu-tab.active {
+    background: var(--color-gold);
+    color: var(--color-text-dark);
   }
   
   .masonry-grid { column-count: 2; }

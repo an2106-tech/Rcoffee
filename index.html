@@ -112,9 +112,26 @@
       <h2 class="text-center">Menu</h2>
       <div class="separator center"></div>
       <!-- Menu Cards -->
+      <!-- Menu Tabs for Mobile -->
+      <div class="menu-tabs-container">
+        <div class="menu-tabs">
+          <button class="menu-tab active" data-target="cat-CAFE">CAFE</button>
+          <button class="menu-tab" data-target="cat-CACAO">CACAO</button>
+          <button class="menu-tab" data-target="cat-MATCHA">MATCHA</button>
+          <button class="menu-tab" data-target="cat-SIGNATURE">SIGNATURE</button>
+          <button class="menu-tab" data-target="cat-TEA">TEA</button>
+          <button class="menu-tab" data-target="cat-SODA">SODA</button>
+          <button class="menu-tab" data-target="cat-BANH">BÁNH</button>
+          <button class="menu-tab" data-target="cat-VEDETTE-MUA-HE">VEDETTE MÙA HÈ</button>
+          <button class="menu-tab" data-target="cat-COLDBREW">COLDBREW</button>
+        </div>
+      </div>
+
       <div class="mobile-menu-cards">
 
-        <h3 class="menu-category fade-in-up">CAFE</h3>
+        
+        <div class="menu-category-group active" id="cat-CAFE">
+          <h3 class="menu-category fade-in-up">CAFE</h3>
         <div class="menu-card fade-in-up">
           <div class="menu-card-content">
             <h4>Cafe Đen</h4><span class="price">18k</span>
@@ -141,7 +158,11 @@
           </div>
         </div>
 
-        <h3 class="menu-category fade-in-up">CACAO</h3>
+        
+        </div>
+
+        <div class="menu-category-group" id="cat-CACAO">
+          <h3 class="menu-category fade-in-up">CACAO</h3>
         <div class="menu-card fade-in-up">
           <div class="menu-card-content">
             <h4>Cacao Sữa Đá</h4><span class="price">22k</span>
@@ -163,7 +184,11 @@
           </div>
         </div>
 
-        <h3 class="menu-category fade-in-up">MATCHA</h3>
+        
+        </div>
+
+        <div class="menu-category-group" id="cat-MATCHA">
+          <h3 class="menu-category fade-in-up">MATCHA</h3>
         <div class="menu-card fade-in-up">
           <div class="menu-card-content">
             <h4>Matcha Latte</h4><span class="price">30k</span>
@@ -180,7 +205,11 @@
           </div>
         </div>
 
-        <h3 class="menu-category fade-in-up">SIGNATURE</h3>
+        
+        </div>
+
+        <div class="menu-category-group" id="cat-SIGNATURE">
+          <h3 class="menu-category fade-in-up">SIGNATURE</h3>
         <div class="menu-card fade-in-up">
           <div class="menu-card-content">
             <h4>Cafe Kem Hạnh Nhân</h4><span class="price">32k</span>
@@ -207,7 +236,11 @@
           </div>
         </div>
 
-        <h3 class="menu-category fade-in-up">TEA</h3>
+        
+        </div>
+
+        <div class="menu-category-group" id="cat-TEA">
+          <h3 class="menu-category fade-in-up">TEA</h3>
         <div class="menu-card fade-in-up">
           <div class="menu-card-content">
             <h4>Trà Vải Hoa Hồng</h4><span class="price">28k</span>
@@ -234,7 +267,11 @@
           </div>
         </div>
 
-        <h3 class="menu-category fade-in-up">SODA</h3>
+        
+        </div>
+
+        <div class="menu-category-group" id="cat-SODA">
+          <h3 class="menu-category fade-in-up">SODA</h3>
         <div class="menu-card fade-in-up">
           <div class="menu-card-content">
             <h4>Soda Chanh</h4><span class="price">23k</span>
@@ -251,7 +288,11 @@
           </div>
         </div>
 
-        <h3 class="menu-category fade-in-up">BÁNH</h3>
+        
+        </div>
+
+        <div class="menu-category-group" id="cat-BANH">
+          <h3 class="menu-category fade-in-up">BÁNH</h3>
         <div class="menu-card fade-in-up">
           <div class="menu-card-content">
             <h4>Bánh Que Chấm Kem</h4><span class="price">15k</span>
@@ -268,7 +309,11 @@
           </div>
         </div>
 
-        <h3 class="menu-category fade-in-up">VEDETTE MÙA HÈ</h3>
+        
+        </div>
+
+        <div class="menu-category-group" id="cat-VEDETTE-MUA-HE">
+          <h3 class="menu-category fade-in-up">VEDETTE MÙA HÈ</h3>
         <div class="menu-card fade-in-up">
           <div class="menu-card-content">
             <h4>Coco Bomb</h4><span class="price">28k</span>
@@ -285,7 +330,11 @@
           </div>
         </div>
 
-        <h3 class="menu-category fade-in-up">COLDBREW</h3>
+        
+        </div>
+
+        <div class="menu-category-group" id="cat-COLDBREW">
+          <h3 class="menu-category fade-in-up">COLDBREW</h3>
         <div class="menu-card fade-in-up">
           <div class="menu-card-content">
             <h4>Orange Coldbrew</h4><span class="price">28k</span>
@@ -310,6 +359,8 @@
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.758294115912!2d105.7640113758868!3d10.036793590070475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0890012881a61%3A0x2a348f9af769d7b7!2sRAWD%20CanTho!5e0!3m2!1sen!2s!4v1782589243790!5m2!1sen!2s"
           style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+        </div>
       </div>
     </div>
   </section>

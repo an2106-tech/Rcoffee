@@ -59,4 +59,28 @@ document.addEventListener('DOMContentLoaded', () => {
   // Select all elements to animate
   const animateElements = document.querySelectorAll('.fade-in-up, .slide-in-left, .slide-in-right, .fade-in');
   animateElements.forEach(el => observer.observe(el));
+
+  // 4. Mobile Menu Tabs
+  const menuTabs = document.querySelectorAll('.menu-tab');
+  const menuGroups = document.querySelectorAll('.menu-category-group');
+
+  if (menuTabs.length > 0 && menuGroups.length > 0) {
+    menuTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove active class from all tabs and groups
+        menuTabs.forEach(t => t.classList.remove('active'));
+        menuGroups.forEach(g => g.classList.remove('active'));
+
+        // Add active class to clicked tab
+        tab.classList.add('active');
+
+        // Show corresponding group
+        const targetId = tab.getAttribute('data-target');
+        const targetGroup = document.getElementById(targetId);
+        if (targetGroup) {
+          targetGroup.classList.add('active');
+        }
+      });
+    });
+  }
 });
